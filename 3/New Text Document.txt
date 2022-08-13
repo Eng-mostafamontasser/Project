@@ -1,0 +1,8 @@
+This video explain how
+1- build portfolio flask application
+2- dockerize flask application
+3- push to Elastic container registry
+4- create container application using Elastic container service
+5- attach ELB to achieve high availability
+6- attach with custom domain reserverd from Godaddy using route 53
+github repo : https://lnkd.in/dyu9rurb

@@ -1,0 +1,7 @@
+This is video explain how using
+1- Godaddy for registration domain name
+2- update nameservers with aws route 53
+3- how install HTTP server on Ec2 and link with Load balancer to achieve high availability
+4- attach Route 53 with it using alias record
+5- using routing policy like failover with health checker
+6- access server using custom domain that reserverd from Godaddy

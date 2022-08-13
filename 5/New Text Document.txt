@@ -1,0 +1,10 @@
+Building portfolio application using cloudformation, ansible and jenkins CI/CD
+1- Ec2 - vpc - subnet - security group - route table - internet gateway
+2- ansible playbook
+3- jenkins CI/CD
+4- github (version control)
+4- github webhook
+4- Docker
+3- cloudformation (INFRA as Code)
+4- Docker flask application
+Github Repo : https://lnkd.in/dF8KNHg2

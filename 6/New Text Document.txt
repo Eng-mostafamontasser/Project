@@ -1,0 +1,10 @@
+Hello Everyone,
+This is my graduation project from Information Technology Institute (ITI) DevOps Track
+
+The project aims to deploy backend application on  GCP Kubernetes cluster using CI/CD pipeline:
+
+- Implement a secure Kubernetes cluster using Terrafom.
+- Deploy and configure Jenkins on Kubernetes using Ansible.
+- Deploy backend application on Kubernetes using Jenkins pipeline.
+
+github: https://lnkd.in/denBG-YQ

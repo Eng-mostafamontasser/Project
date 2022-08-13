@@ -1,0 +1,64 @@
+version: "2"
+services: 
+  web:
+    build: 
+      context: nginx
+      dockerfile: Dockerfile
+    container_name: server-nginx
+    env_file:
+      - ".env"
+    volumes: 
+      - "${WEB_APP}:/var/www/html"
+    ports: 
+      - 80:80
+    working_dir: /var/www/html
+    links: 
+      - php
+    networks:
+      - db
+  php:
+    build: 
+      context: php
+      dockerfile: Dockerfile
+    environment:
+      SERVICE_NAME: demo_app
+      SERVICE_TAGS: dev
+    container_name: php-fpm
+    env_file:
+      - ".env"
+    volumes:
+      - "${WEB_APP}:/var/www/html"
+    ports: 
+      - 9000:9000
+    networks: 
+      - db
+  mysql:
+    image: mysql:${MYSQL_VERSION}
+    container_name: db-mysql
+    restart: unless-stopped
+    env_file:
+      - ".env"
+    environment: 
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports: 
+      - 8889:3306
+    networks:
+      - db
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin
+    restart: always
+    ports: 
+      - 8080:80
+    environment:
+      PMA_ARBITRARY: 1
+    links: 
+      - mysql
+    networks:
+      - db
+networks: 
+  db:
+    driver: bridge

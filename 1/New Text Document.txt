@@ -1,0 +1,9 @@
+Build E-learning application using CI/CD Jenkins on Ec2 instance
+1- ec2
+2- bash script
+3- docker
+4- jenkins
+5- slack notification
+Bash script : https://lnkd.in/duxaiXiw
+Docker image : https://lnkd.in/dvnxeWRj
+application : https://lnkd.in/dSRsVHHA

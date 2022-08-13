@@ -1,0 +1,9 @@
+This video explain how
+1- Pull Grafana image and push to ECR
+2- create Grafana service on ECS
+3- retrieve matrices information from Ec2 cloudwatch
+4- assign cloudwatch IAM role to IAM user
+5- retrieve programtic access for user to give permission for Grafana
+6- create ELB for Grafana container to achieve high availability
+7- link Route53 with ELB to handling traffic from custom domain
+YouTube : https://lnkd.in/dvipQufn
